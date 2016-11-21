@@ -15,9 +15,11 @@ public class Laucher {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        System.out.println("feeding...");
         for(int i = 1; i <= 20; i++) {
             ExecutorAccessService.instance.addSingleTask(new TextSingleTask("test " + i*13));
         }
+        System.out.println("feeded");
         ExecutorAccessService.instance.shutdown();
     }
     
